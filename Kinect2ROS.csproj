@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9D1625D-540D-4B72-AFEF-1BE6C821943E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kinect2ROS</RootNamespace>
+    <AssemblyName>Kinect2ROS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Kinect, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AggregatedMessages.cs" />
+    <Compile Include="BaseMessage.cs" />
+    <Compile Include="BaseTypes.cs" />
+    <Compile Include="Bool.cs" />
+    <Compile Include="Byte.cs" />
+    <Compile Include="ByteMultiArray.cs" />
+    <Compile Include="CameraInfo.cs" />
+    <Compile Include="ChannelFloat32.cs" />
+    <Compile Include="Char.cs" />
+    <Compile Include="ColorRGBA.cs" />
+    <Compile Include="CompressedImage.cs" />
+    <Compile Include="CompressedMessage.cs" />
+    <Compile Include="CompressedPointCloud2.cs" />
+    <Compile Include="Duration.cs" />
+    <Compile Include="Empty.cs" />
+    <Compile Include="FingerTrack.cs" />
+    <Compile Include="Float32.cs" />
+    <Compile Include="Float32MultiArray.cs" />
+    <Compile Include="Float64.cs" />
+    <Compile Include="Float64MultiArray.cs" />
+    <Compile Include="FluidPressure.cs" />
+    <Compile Include="GoalID.cs" />
+    <Compile Include="GoalStatus.cs" />
+    <Compile Include="GoalStatusArray.cs" />
+    <Compile Include="HandTrack.cs" />
+    <Compile Include="Header.cs" />
+    <Compile Include="Illuminance.cs" />
+    <Compile Include="Image.cs" />
+    <Compile Include="Imu.cs" />
+    <Compile Include="Int16.cs" />
+    <Compile Include="Int16MultiArray.cs" />
+    <Compile Include="Int32.cs" />
+    <Compile Include="Int32MultiArray.cs" />
+    <Compile Include="Int64.cs" />
+    <Compile Include="Int64MultiArray.cs" />
+    <Compile Include="Int8.cs" />
+    <Compile Include="Int8MultiArray.cs" />
+    <Compile Include="JointControllerState.cs" />
+    <Compile Include="JointState.cs" />
+    <Compile Include="JointTrajectory.cs" />
+    <Compile Include="JointTrajectoryControllerState.cs" />
+    <Compile Include="JointTrajectoryPoint.cs" />
+    <Compile Include="Joy.cs" />
+    <Compile Include="JoyFeedback.cs" />
+    <Compile Include="JoyFeedbackArray.cs" />
+    <Compile Include="LaserEcho.cs" />
+    <Compile Include="LaserScan.cs" />
+    <Compile Include="MagneticField.cs" />
+    <Compile Include="MultiArrayDimension.cs" />
+    <Compile Include="MultiArrayLayout.cs" />
+    <Compile Include="MultiDOFJointState.cs" />
+    <Compile Include="MultiDOFJointTrajectory.cs" />
+    <Compile Include="MultiDOFJointTrajectoryPoint.cs" />
+    <Compile Include="MultiEchoLaserScan.cs" />
+    <Compile Include="NavSatFix.cs" />
+    <Compile Include="NavSatStatus.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="Point32.cs" />
+    <Compile Include="PointCloud.cs" />
+    <Compile Include="PointCloud2.cs" />
+    <Compile Include="PointField.cs" />
+    <Compile Include="PointStamped.cs" />
+    <Compile Include="Polygon.cs" />
+    <Compile Include="PolygonStamped.cs" />
+    <Compile Include="Pose.cs" />
+    <Compile Include="Pose2D.cs" />
+    <Compile Include="PoseArray.cs" />
+    <Compile Include="PoseStamped.cs" />
+    <Compile Include="PoseWithCovariance.cs" />
+    <Compile Include="PoseWithCovarianceStamped.cs" />
+    <Compile Include="Pr2GripperCommand.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quaternion.cs" />
+    <Compile Include="QuaternionStamped.cs" />
+    <Compile Include="Range.cs" />
+    <Compile Include="RegionOfInterest.cs" />
+    <Compile Include="RelativeHumidity.cs" />
+    <Compile Include="SerializedMessage.cs" />
+    <Compile Include="SkeletonTrack.cs" />
+    <Compile Include="SocketRX.cs" />
+    <Compile Include="SocketTX.cs" />
+    <Compile Include="String.cs" />
+    <Compile Include="Temperature.cs" />
+    <Compile Include="Time.cs" />
+    <Compile Include="TimeReference.cs" />
+    <Compile Include="TopicUpdate.cs" />
+    <Compile Include="TrackedPerson.cs" />
+    <Compile Include="TrackerState.cs" />
+    <Compile Include="Transform.cs" />
+    <Compile Include="TransformStamped.cs" />
+    <Compile Include="Twist.cs" />
+    <Compile Include="TwistStamped.cs" />
+    <Compile Include="TwistWithCovariance.cs" />
+    <Compile Include="TwistWithCovarianceStamped.cs" />
+    <Compile Include="UInt16.cs" />
+    <Compile Include="UInt16MultiArray.cs" />
+    <Compile Include="UInt32.cs" />
+    <Compile Include="UInt32MultiArray.cs" />
+    <Compile Include="UInt64.cs" />
+    <Compile Include="UInt64MultiArray.cs" />
+    <Compile Include="UInt8.cs" />
+    <Compile Include="UInt8MultiArray.cs" />
+    <Compile Include="Vector3.cs" />
+    <Compile Include="Vector3Stamped.cs" />
+    <Compile Include="Wrench.cs" />
+    <Compile Include="WrenchStamped.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
